@@ -1,1 +1,120 @@
+#Bandit level 0
+
+ssh bandit0@bandit.labs.overthewire.org -p 2220
+
+cat readme
+
+boJ9jbbUNNfktd78OOpsqOltutMc3MY1
+
+#Bandit level 1
+
+ssh bandit1@bandit.labs.overthewire.org -p 2220
+
+ls -l
+cat ./-
+cat /home/bandit1/-
+cat /home/bandit1/-
+cat $(pwd)/-
+
+CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9
+
+#Bandit level 2
+
+ssh bandit2@bandit.labs.overthewire.org -p 2220
+
+ls -l
+cat "spaces in this filename"
+cat spaces\ in\ this\ filename
+cat sp*
+cat *ame
+cat *this*
+cat $(pwd)/*
+
+UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK
+
+#Bandit level 3
+
+ssh bandit3@bandit.labs.overthewire.org -p 2220
+
+ls -a inhere/
+find .
+find . -type f -prinf "%f\t%p\t%u\t%g\t%m\n" | column -t
+find . -name .hidden | xargs cat
+
+pIwrPrtPN36QITSp3EQaw936yaFoFgAB
+
+#Bandit level 4
+
+ssh bandit4@bandit.labs.overthewire.org -p 2220
+
+ls -l inhere/
+find . -name -file*
+find . -name -file* | xargs file
+file inhere/*
+time find . -name -file* | xargs file
+time file inhere/*
+find . -name -file07 | xargs cat
+
+koReBOKuIDDepwhWk7jZC0RTdopnAYKh
+
+#Bandit level 5
+
+ssh bandit5@bandit.labs.overthewire.org -p 2220
+
+find . -type f -readable ! -executable -size 1033c | xargs cat | xargs
+find . -type f -readable ! -executable -size 1033c | xargs cat | sed 's/^ *//'
+find . -type f -readable ! -executable -size 1033c | xargs cat | sed '/^\s*$/d'
+
+DXjZPULLxYr17uwoI01bNLQbtFemEgo7
+
+#Bandit level 6
+
+ssh bandit6@bandit.labs.overthewire.org -p 2220
+
+find / -user bandit7 -group bandit6 -size 33c 2>/dev/null | xargs cat
+
+HKBPTKQnIay4Fw76bEy8PVxKEDQRKTzs
+
+#Bandit level 7
+
+ssh bandit6@bandit.labs.overthewire.org -p 2220
+
+cat data.txt | wc -l
+cat data.txt | grep millionth
+grep "millionth" data.txt
+cat data.txt | awk '/millionth/'
+awk '/millionth/' data.txt
+awk '/millionth/' data.txt | awk '{print $2'}
+awk '/millionth/' data.txt | awk 'NF{print $NF}'
+grep "millionth" data.txt -n
+awk 'NR==37262' data.txt
+
+cvX2JJa4CFALtqS87jk27qwqGhBM9plV
+
+#Bandit level 8
+
+ssh bandit8@bandit.labs.overthewire.org -p 2220
+
+cat data.txt
+cat data.txt | wc -l
+cat data.txt | sort | uniq -u
+
+UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR
+
+#Bandit level 9
+
+ssh bandit9@bandit.labs.overthewire.org -p 2220
+
+cat data.txt
+
+
+
+
+
+
+
+
+
+
+
 
