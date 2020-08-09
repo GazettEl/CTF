@@ -106,8 +106,108 @@ UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR
 ssh bandit9@bandit.labs.overthewire.org -p 2220
 
 cat data.txt
+contador=1; strings data.txt | grep "===" | while read line; do echo "Linea $contador: $line"; let contador+=1; done | awk "NR==4" | awk 'NF{print $NF}'
+
+truKLdjsbJ5g7yyJ2X2R0o3a5HQJFuLk
+
+#Bandit level 10
+
+ssh bandit10@bandit.labs.overthewire.org -p 2220
+
+cat data.txt | base64 -d
+cat data.txt | base64 -d | tr ' ' '\n' | tail -n 1
+
+IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR
+
+#Bandit level 11
+
+ssh bandit11@bandit.labs.overthewire.org -p 2220
+
+cat data.txt | tr '[G-ZA-Fg-za-f]' '[T-ZA-St-za-s]' | awk 'NF{print $NF}'
+
+5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu
+
+#Bandit level 12
+
+ssh bandit12@bandit.labs.overthewire.org -p 2220
+
+xxd -r content.hex > content
+file content
+mv content content.gzip
+----------------------
+
+#!/bin/bash
+
+name_decompressed=$(7z l content.gzip | grep "Name" -A 2 | tail -n 1 | awk 'NF{print $NF}')
+
+7z x content.gzip > /dev/null 2>&1
+
+while true; do 
+        7z l $name_decompressed > /dev/null 2>&1
+
+        if [ "$(echo  $?)" == "0" ]; then 
+                decompressed_next=$(7z l $name_decompressed | grep "Name" -A 2 | tail -n 1 | awk 'NF{print $NF}')
+                7z x $name_decompressed > /dev/null 2>&1 && name_decompressed=$decompressed_next
+        else
+                cat $name_decompressed; rm data* 2>/dev/null
+                exit 1
+        fi
+done
 
 
+----------------------
+
+8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL
+
+#Bandit level 13
+
+ssh bandit13@bandit.labs.overthewire.org -p 2220
+
+ssh -i sshkey.private bandit@localhost
+cat /etc/bandit_pass/bandit14
+
+4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e
+
+#Bandit level 14
+
+ssh bandit14@bandit.labs.overthewire.org -p 2220
+
+bash -c "echo '' > /dev/tcp/127.0.0.1/30000" 2>/dev/null && echo "[*] Puerto abierto" || echo "[*] Puerto cerrado"
+echo "4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e" | nc localhost 30000
+
+BfMYroe26WYalil77FoDi9qh59eK5xNr
+
+#Bandit level 15
+
+ssh bandit15@bandit.labs.overthewire.org -p 2220
+
+openssl s_client -connect 127.0.0.1:30001
+
+cluFn7wTiGryunymYOu4RcffSxQluehd
+
+#Bandit level 16
+
+ssh bandit16@bandit.labs.overthewire.org -p 2220
+
+nmap --open -T5 -v -n -p31000-32000 127.0.0.1
+
+openssl s_client -connect 127.0.0.1:31046
+openssl s_client -connect 127.0.0.1:31518
+openssl s_client -connect 127.0.0.1:31691
+openssl s_client -connect 127.0.0.1:31790
+ssh -i id_rsa bandit17@localhost
+
+xLYVMN9WE5zQ5vHacb0sZEVqbrp7nBTn
+
+#Bandit level 17
+
+ssh bandit17@bandit.labs.overthewire.org -p 2220
+
+cat password.old | wc -l
+cat password.old | wc -1
+diff passwords.old passwords.new
+
+kfBf3eYk5BPBRzwjqutbbfE887SVc5Yd
 
 
 
